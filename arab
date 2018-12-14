@@ -1,3 +1,8 @@
-#EXTM3U
-#EXTINF:-1,2
-http://38.99.146.69:7777/2MMorocco_Med.m3u8?user=&session=?user=&session=39045440f580a883ba95b58e3e9cb6a4221d46f6ae174387bd305ffcf538d44aa299017ce29bf1aa
+<?php
+?>#EXTINF:-1,AlMaghribia
+<?php
+?>http://38.99.146.69:7777/AlMaghribia_Med.m3u8?session=<?php
+$page = file_get_contents("http://www.glturk.com/ajax.aspx?stream=live&type=reg&ppoint=Oasis_HD");
+$split= explode("session=", $page)[1];
+echo $split;
+?>
